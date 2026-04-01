@@ -12,6 +12,7 @@ const helpFeedbackChat = async (data, socket, io) => {
       return socket.emit("error", "Missing required fields");
     }
 
+    
     // ✅ Verify user
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const senderId = decoded.id;
